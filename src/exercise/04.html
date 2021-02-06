@@ -18,15 +18,15 @@
     }
 
     Message.propTypes = {
-      greeting: PropTypes.string,
-      subject: PropTypes.string,
+      greeting: PropTypes.string.isRequired,
+      subject: PropTypes.string.isRequired,
     }
 
     const element = (
-      <div className="container">
-        <Message greeting={1} subject="World" />
+      <React.Fragment>
+        <Message greeting="Hello" subject="World" />
         <Message greeting="Goodbye" subject="World" />
-      </div>
+      </React.Fragment>
     )
 
     ReactDOM.render(element, document.getElementById('root'))
