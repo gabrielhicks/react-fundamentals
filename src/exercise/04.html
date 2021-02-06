@@ -3,18 +3,12 @@
 
 <body>
   <div id="root"></div>
+  <!-- Prop Types are run in development at runtime ONLY feature -->
   <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   <script type="text/babel">
-    const PropTypes = {
-      string(props, propName, componentName) {
-        if (typeof props[propName] !== 'string') {
-          return new Error('Some useful error message here')
-        }
-      },
-    }
-
     function Message({subject, greeting}) {
       return (
         <div className="message">
