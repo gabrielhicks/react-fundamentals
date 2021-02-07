@@ -4,7 +4,6 @@
 import * as React from 'react'
 
 function UsernameForm({onSubmitUsername}) {
-  const inputRef = React.useRef(null)
   const [username, setUsername] = React.useState('')
 
   function handleChange(event) {
@@ -22,7 +21,6 @@ function UsernameForm({onSubmitUsername}) {
       <div>
         <label htmlFor="username">Username:</label>
         <input
-          ref={inputRef}
           value={username}
           onChange={handleChange}
           id="username"
